@@ -1,0 +1,31 @@
+<div class="container">
+  <h1>what2do</h1>
+
+  <div class="sum-card">
+    <span class="sum-label">Total</span>
+    <span class="sum-value">{{ sum() }}</span>
+    <span class="sum-meta">{{ count() }} {{ count() === 1 ? 'response' : 'responses' }}</span>
+  </div>
+
+  @if (!submitted()) {
+    <div class="input-section">
+      <p class="prompt">Pick a number from 1 to 10</p>
+      <input
+        type="number"
+        [(ngModel)]="value"
+        min="1"
+        max="10"
+        step="1"
+        [disabled]="loading()"
+      />
+      @if (error()) {
+        <p class="error">{{ error() }}</p>
+      }
+      <button (click)="submit()" [disabled]="loading()">
+        {{ loading() ? 'Submitting…' : 'Submit' }}
+      </button>
+    </div>
+  } @else {
+    <p class="done-msg">Your number is in. The total updates live as others respond.</p>
+  }
+</div>

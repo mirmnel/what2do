@@ -1,0 +1,118 @@
+:host {
+  display: block;
+  min-height: 100dvh;
+  background: #f5f5f5;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.container {
+  max-width: 380px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 2rem;
+  letter-spacing: -0.02em;
+}
+
+.sum-card {
+  background: #111;
+  color: #fff;
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.sum-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  opacity: 0.5;
+}
+
+.sum-value {
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.sum-meta {
+  font-size: 0.8rem;
+  opacity: 0.45;
+  margin-top: 0.25rem;
+}
+
+.prompt {
+  color: #555;
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+}
+
+input[type='number'] {
+  display: block;
+  width: 100%;
+  padding: 0.875rem;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  margin-bottom: 0.75rem;
+  box-sizing: border-box;
+  outline: none;
+  background: #fff;
+  transition: border-color 0.15s;
+  -moz-appearance: textfield;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  opacity: 1;
+}
+
+input[type='number']:focus {
+  border-color: #111;
+}
+
+button {
+  width: 100%;
+  padding: 0.875rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+button:hover:not(:disabled) {
+  background: #333;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.error {
+  color: #c0392b;
+  font-size: 0.85rem;
+  margin: 0 0 0.75rem;
+}
+
+.done-msg {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
